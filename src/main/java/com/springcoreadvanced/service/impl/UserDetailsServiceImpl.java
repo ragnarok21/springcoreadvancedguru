@@ -4,6 +4,7 @@ import com.springcoreadvanced.domain.User;
 import com.springcoreadvanced.domain.UserDetailsImpl;
 import com.springcoreadvanced.service.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 
-@Service
+@Service(value = "userDetailsServiceImpl")
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     private UserRepository userRepository;
